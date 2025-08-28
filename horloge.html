@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Horloge minuteur</title>
+<style type="text/css" media="all">
+    h1,h3 {
+        text-decoration: underline;
+        letter-spacing: 10px;
+        word-spacing: 20px;
+    }
+    body {
+        justify-items: center;
+    }
+    .montre {
+        border: 10px solid;
+        width: 80%;
+        height: 100px;
+        align-content: center;
+        text-align: center;
+        font-size: 60px;
+        padding: 20px;
+        color: darkblue;
+        font-weight: bolder;
+        text-shadow: 2px 2px 2px #000;
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 20px #000,0px 100px 30px -60px #000;
+    }
+</style>
+</head>
+<body>
+<h1>Horloge</h1>
+<h3>Heure Locale</h3>
+<div id="montre" class="montre"></div>
+<script type="text/javascript" charset="utf-8">
+setInterval(function Horloge() {
+let minuteur = document.getElementById("montre");
+let time = new Date().toLocaleTimeString();
+minuteur.textContent = time
+}, 1000);
+</script>
+</body>
+</html>
